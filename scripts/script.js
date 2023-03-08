@@ -31,6 +31,17 @@ do {
     }
 } while (result != 1);
 
+for (let course of courseList) {
+    if (course["code"].slice(5, 9) === user_input) {
+        console.log(`"Yes, I am taking the course: ${course["code"]} - ${course["name"]}`);
+    }
+    else {
+        new_item = { code: user_input, name: null }
+        courseList.push(new_item);
+        console.log(courseList);
+        break;
+    }
+};
 
 
 
